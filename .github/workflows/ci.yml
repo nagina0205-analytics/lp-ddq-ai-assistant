@@ -1,0 +1,52 @@
+name: Test and evaluate the LP agent
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-and-evaluate:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Load the portfolio database (with data quality checks)
+        run: python src/build_db.py
+
+      - name: Python unit tests
+        run: python -m unittest discover tests -v
+
+      - name: Evaluate the agent (offline mode)
+        run: python src/run_eval.py
+
+      - name: JavaScript tests (browser agent must match the Python agent)
+        run: node tests/test_agent_js.js
+
+      - name: Evaluate with Claude (only if an API key secret is set)
+        if: env.ANTHROPIC_API_KEY != ''
+        run: python src/run_eval.py --claude
+
+      - name: Save the latest reports
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add output/*.md output/*.json docs/*.json
+          git diff --cached --quiet || git commit -m "Update evaluation reports"
+          git push
