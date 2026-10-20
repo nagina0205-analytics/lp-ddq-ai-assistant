@@ -1,0 +1,883 @@
+{
+ "run_time": "2026-10-20 22:50 UTC",
+ "metrics": {
+  "mode": "offline",
+  "questions": 26,
+  "answer_accuracy": "21/21",
+  "source_accuracy": "21/21",
+  "correct_refusals": "5/5",
+  "hallucinations": 0,
+  "overall_correct": "26/26"
+ },
+ "holdout_metrics": {
+  "mode": "offline",
+  "questions": 12,
+  "answer_accuracy": "8/9",
+  "source_accuracy": "8/9",
+  "correct_refusals": "3/3",
+  "hallucinations": 0,
+  "overall_correct": "11/12"
+ },
+ "results": [
+  {
+   "id": "D01",
+   "question": "What is the size of Fund III?",
+   "status": "answered",
+   "answer": "Fund III closed in March 2024 with total commitments of $600 million from 41 limited partners.",
+   "citations": [
+    "fund_overview#Fund terms"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What is the size of Fund III?"
+     },
+     "citations": [
+      "fund_overview#Fund terms"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D02",
+   "question": "How much did the general partner commit to the fund?",
+   "status": "answered",
+   "answer": "The general partner commitment is 2% of total commitments, or $12 million.",
+   "citations": [
+    "fund_overview#Fund terms"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "How much did the general partner commit to the fund?"
+     },
+     "citations": [
+      "fund_overview#Fund terms",
+      "fees_and_expenses#Carried interest",
+      "fund_overview#Team",
+      "fund_overview#Key person",
+      "valuation_policy#Valuation committee"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D03",
+   "question": "How long is the investment period?",
+   "status": "answered",
+   "answer": "The investment period is five years from the final close.",
+   "citations": [
+    "fund_overview#Fund terms"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "How long is the investment period?"
+     },
+     "citations": [
+      "fees_and_expenses#Management fee",
+      "fund_overview#Key person",
+      "fund_overview#Fund terms",
+      "fund_overview#Team",
+      "esg_and_compliance#Responsible investment"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D04",
+   "question": "What share of the fund is reserved for follow-on investments?",
+   "status": "answered",
+   "answer": "About 50% of the fund is reserved for follow-on investments in existing portfolio companies.",
+   "citations": [
+    "fund_overview#Strategy"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What share of the fund is reserved for follow-on investments?"
+     },
+     "citations": [
+      "fund_overview#Strategy",
+      "fund_overview#Team",
+      "esg_and_compliance#Responsible investment",
+      "fees_and_expenses#Management fee",
+      "esg_and_compliance#Regulatory status"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D05",
+   "question": "What is the management fee during the investment period?",
+   "status": "answered",
+   "answer": "The management fee is 2.5% per year on committed capital during the investment period.",
+   "citations": [
+    "fees_and_expenses#Management fee"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What is the management fee during the investment period?"
+     },
+     "citations": [
+      "fees_and_expenses#Management fee",
+      "fees_and_expenses#Fund expenses",
+      "fund_overview#Key person",
+      "fund_overview#Fund terms",
+      "fund_overview#Team"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D06",
+   "question": "What does the management fee step down to after the investment period?",
+   "status": "answered",
+   "answer": "After the investment period ends, the fee steps down to 1.5% per year on invested capital that has not been realized or written off.",
+   "citations": [
+    "fees_and_expenses#Management fee"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What does the management fee step down to after the investment period?"
+     },
+     "citations": [
+      "fees_and_expenses#Management fee",
+      "fees_and_expenses#Fund expenses",
+      "valuation_policy#Write-downs",
+      "fund_overview#Key person",
+      "lp_reporting#Quarterly reports"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D07",
+   "question": "What is the carried interest rate and when does it increase?",
+   "status": "answered",
+   "answer": "Carry rises to 25% once the fund has returned three times paid-in capital to limited partners. The general partner receives 20% carried interest on fund profits.",
+   "citations": [
+    "fees_and_expenses#Carried interest"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What is the carried interest rate and when does it increase?"
+     },
+     "citations": [
+      "fees_and_expenses#Carried interest"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D08",
+   "question": "Is there a GP clawback?",
+   "status": "answered",
+   "answer": "A full general partner clawback applies at the end of the fund term.",
+   "citations": [
+    "fees_and_expenses#Carried interest"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Is there a GP clawback?"
+     },
+     "citations": [
+      "fees_and_expenses#Carried interest",
+      "fund_overview#Team",
+      "fund_overview#Fund terms",
+      "fund_overview#Key person",
+      "valuation_policy#Valuation committee"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D09",
+   "question": "Who sits on the valuation committee?",
+   "status": "answered",
+   "answer": "The valuation committee has three members: the chief financial officer, one general partner who does not sit on the company's board, and an independent advisor.",
+   "citations": [
+    "valuation_policy#Valuation committee"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Who sits on the valuation committee?"
+     },
+     "citations": [
+      "valuation_policy#Valuation committee",
+      "valuation_policy#Approach",
+      "lp_reporting#Annual meeting",
+      "fund_overview#Key person",
+      "fund_overview#Fund terms"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D10",
+   "question": "When do LPs receive audited financial statements?",
+   "status": "answered",
+   "answer": "The fourth-quarter report is delivered with the audited financial statements, within 120 days after year end.",
+   "citations": [
+    "lp_reporting#Quarterly reports"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "When do LPs receive audited financial statements?"
+     },
+     "citations": [
+      "lp_reporting#Quarterly reports",
+      "valuation_policy#Audit",
+      "fees_and_expenses#Carried interest",
+      "fund_overview#Team",
+      "valuation_policy#Valuation committee"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D11",
+   "question": "How many days notice do LPs get before a capital call?",
+   "status": "answered",
+   "answer": "Capital call notices are sent at least 10 business days before the funding date.",
+   "citations": [
+    "lp_reporting#Capital calls and distributions"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "How many days notice do LPs get before a capital call?"
+     },
+     "citations": [
+      "lp_reporting#Capital calls and distributions",
+      "lp_reporting#Quarterly reports",
+      "fees_and_expenses#Management fee",
+      "valuation_policy#Approach",
+      "valuation_policy#Audit"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D12",
+   "question": "When are quarterly reports delivered to limited partners?",
+   "status": "answered",
+   "answer": "Limited partners receive a quarterly report within 60 days after each quarter end.",
+   "citations": [
+    "lp_reporting#Quarterly reports"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "When are quarterly reports delivered to limited partners?"
+     },
+     "citations": [
+      "lp_reporting#Quarterly reports",
+      "valuation_policy#Audit",
+      "fees_and_expenses#Carried interest",
+      "fund_overview#Team",
+      "esg_and_compliance#Compliance"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D13",
+   "question": "Is the firm registered with the SEC?",
+   "status": "answered",
+   "answer": "Northwind is registered with the SEC as an investment adviser.",
+   "citations": [
+    "esg_and_compliance#Regulatory status"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Is the firm registered with the SEC?"
+     },
+     "citations": [
+      "esg_and_compliance#Regulatory status"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D14",
+   "question": "How often does the firm run a penetration test?",
+   "status": "answered",
+   "answer": "The firm runs an external penetration test every year and phishing simulations every quarter.",
+   "citations": [
+    "esg_and_compliance#Cybersecurity"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "How often does the firm run a penetration test?"
+     },
+     "citations": [
+      "esg_and_compliance#Cybersecurity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D15",
+   "question": "Which industries are on the investment exclusion list?",
+   "status": "answered",
+   "answer": "Northwind screens every new investment against an exclusion list that covers weapons manufacturing, tobacco and thermal coal.",
+   "citations": [
+    "esg_and_compliance#Responsible investment"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Which industries are on the investment exclusion list?"
+     },
+     "citations": [
+      "esg_and_compliance#Responsible investment",
+      "fund_overview#Key person",
+      "fund_overview#Team",
+      "fund_overview#Strategy",
+      "fees_and_expenses#Management fee"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P01",
+   "question": "What was the fund's net IRR last quarter?",
+   "status": "answered",
+   "answer": "As of 2026-Q3, net IRR was 16.2%.",
+   "citations": [
+    "portfolio_db:fund_metrics"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT quarter, net_irr, tvpi, dpi, nav_usd FROM fund_metrics ORDER BY quarter DESC LIMIT 1"
+     },
+     "citations": [
+      "portfolio_db:fund_metrics"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P02",
+   "question": "What are the latest TVPI and DPI?",
+   "status": "answered",
+   "answer": "As of 2026-Q3, TVPI was 1.22x and DPI was 0.03x.",
+   "citations": [
+    "portfolio_db:fund_metrics"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT quarter, net_irr, tvpi, dpi, nav_usd FROM fund_metrics ORDER BY quarter DESC LIMIT 1"
+     },
+     "citations": [
+      "portfolio_db:fund_metrics"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P03",
+   "question": "Who is the lead partner on Lumora?",
+   "status": "answered",
+   "answer": "The lead partner on Lumora is Dana Whitfield.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT lead_partner FROM portfolio_companies WHERE company = 'Lumora'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P04",
+   "question": "How much has the fund invested in Pylonix?",
+   "status": "answered",
+   "answer": "The fund has invested $14,000,000 in Pylonix.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT invested_usd FROM portfolio_companies WHERE company = 'Pylonix'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P05",
+   "question": "What is our exposure to AI Infrastructure?",
+   "status": "answered",
+   "answer": "The fund has 4 companies in AI Infrastructure, with $37.0 million invested.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT COUNT(*) AS n, SUM(invested_usd) AS inv FROM portfolio_companies WHERE sector = 'AI Infrastructure'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P06",
+   "question": "What is our exposure to crypto?",
+   "status": "answered",
+   "answer": "The fund has no portfolio companies in that sector. Current sectors: AI Infrastructure, Fintech, Enterprise Software.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT DISTINCT sector FROM portfolio_companies"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U01",
+   "question": "Does the firm offer co-investment rights to large LPs?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "no document covers: offer, co, right, large",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Does the firm offer co-investment rights to large LPs?"
+     },
+     "citations": []
+    }
+   ]
+  },
+  {
+   "id": "U02",
+   "question": "Has any LP signed a side letter?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "no document covers: signed, side, letter",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Has any LP signed a side letter?"
+     },
+     "citations": []
+    }
+   ]
+  },
+  {
+   "id": "U03",
+   "question": "What is the management fee for Fund IV?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "question is about Fund IV, but the data only covers Fund III",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "route_to_human",
+     "input": {
+      "reason": "other fund"
+     },
+     "citations": []
+    }
+   ]
+  },
+  {
+   "id": "U04",
+   "question": "Who is the lead partner on Mosaiq?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "lead_partner for Mosaiq is missing in the portfolio database",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT lead_partner FROM portfolio_companies WHERE company = 'Mosaiq'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U05",
+   "question": "What is Driftwave currently valued at?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "current_value_usd for Driftwave is missing in the portfolio database",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT current_value_usd FROM portfolio_companies WHERE company = 'Driftwave'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H01",
+   "question": "How many limited partners are in Fund III?",
+   "status": "answered",
+   "answer": "Audited financial statements are delivered to limited partners within 120 days after year end.",
+   "citations": [
+    "valuation_policy#Audit"
+   ],
+   "reason": "",
+   "correct": false,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "How many limited partners are in Fund III?"
+     },
+     "citations": [
+      "valuation_policy#Audit",
+      "fees_and_expenses#Carried interest",
+      "fund_overview#Fund terms",
+      "lp_reporting#Quarterly reports",
+      "fund_overview#Team"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H02",
+   "question": "Are organizational expenses capped?",
+   "status": "answered",
+   "answer": "Organizational expenses are capped at $1.5 million.",
+   "citations": [
+    "fees_and_expenses#Fund expenses"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Are organizational expenses capped?"
+     },
+     "citations": [
+      "fees_and_expenses#Fund expenses"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H03",
+   "question": "When does the valuation committee meet?",
+   "status": "answered",
+   "answer": "The committee meets within 30 days after each quarter end.",
+   "citations": [
+    "valuation_policy#Valuation committee"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "When does the valuation committee meet?"
+     },
+     "citations": [
+      "valuation_policy#Valuation committee",
+      "lp_reporting#Annual meeting",
+      "valuation_policy#Approach",
+      "fund_overview#Key person",
+      "fund_overview#Fund terms"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H04",
+   "question": "Where is the annual LP meeting held?",
+   "status": "answered",
+   "answer": "Northwind holds an annual LP meeting each spring in San Francisco, with a virtual option.",
+   "citations": [
+    "lp_reporting#Annual meeting"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Where is the annual LP meeting held?"
+     },
+     "citations": [
+      "lp_reporting#Annual meeting",
+      "valuation_policy#Valuation committee",
+      "valuation_policy#Approach",
+      "valuation_policy#Audit",
+      "esg_and_compliance#Compliance"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H05",
+   "question": "Who does the chief compliance officer report to?",
+   "status": "answered",
+   "answer": "The chief compliance officer reports directly to the managing partner.",
+   "citations": [
+    "esg_and_compliance#Compliance"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "Who does the chief compliance officer report to?"
+     },
+     "citations": [
+      "esg_and_compliance#Compliance",
+      "fund_overview#Team",
+      "valuation_policy#Valuation committee",
+      "lp_reporting#Quarterly reports",
+      "lp_reporting#Data requests"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H06",
+   "question": "What is the TVPI as of the latest quarter?",
+   "status": "answered",
+   "answer": "As of 2026-Q3, TVPI was 1.22x.",
+   "citations": [
+    "portfolio_db:fund_metrics"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT quarter, net_irr, tvpi, dpi, nav_usd FROM fund_metrics ORDER BY quarter DESC LIMIT 1"
+     },
+     "citations": [
+      "portfolio_db:fund_metrics"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H07",
+   "question": "What stage is Orbitra?",
+   "status": "answered",
+   "answer": "Orbitra is a Series A company.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT stage FROM portfolio_companies WHERE company = 'Orbitra'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H08",
+   "question": "What is the fund's exposure to Fintech?",
+   "status": "answered",
+   "answer": "The fund has 3 companies in Fintech, with $18.5 million invested.",
+   "citations": [
+    "portfolio_db:portfolio_companies"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "query_portfolio_db",
+     "input": {
+      "sql": "SELECT COUNT(*) AS n, SUM(invested_usd) AS inv FROM portfolio_companies WHERE sector = 'Fintech'"
+     },
+     "citations": [
+      "portfolio_db:portfolio_companies"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H09",
+   "question": "What is the hurdle rate on carried interest?",
+   "status": "answered",
+   "answer": "There is no preferred return hurdle.",
+   "citations": [
+    "fees_and_expenses#Carried interest"
+   ],
+   "reason": "",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What is the hurdle rate on carried interest?"
+     },
+     "citations": [
+      "fees_and_expenses#Carried interest"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "H10",
+   "question": "What is the fund's ESG rating from MSCI?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "no document covers: rat, msci",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "search_fund_documents",
+     "input": {
+      "query": "What is the fund's ESG rating from MSCI?"
+     },
+     "citations": []
+    }
+   ]
+  },
+  {
+   "id": "H11",
+   "question": "How many employees does Lumora have?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "not sure which detail about Lumora is being asked for",
+   "correct": true,
+   "steps": []
+  },
+  {
+   "id": "H12",
+   "question": "What was the net IRR of Fund II?",
+   "status": "needs_human_review",
+   "answer": "I could not confirm this from the fund documents or the portfolio database, so I have routed it to the investor relations team.",
+   "citations": [],
+   "reason": "question is about Fund II, but the data only covers Fund III",
+   "correct": true,
+   "steps": [
+    {
+     "tool": "route_to_human",
+     "input": {
+      "reason": "other fund"
+     },
+     "citations": []
+    }
+   ]
+  }
+ ]
+}

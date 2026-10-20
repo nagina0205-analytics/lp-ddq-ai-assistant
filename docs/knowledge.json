@@ -1,0 +1,122 @@
+[
+ {
+  "id": "esg_and_compliance#Responsible investment",
+  "doc": "esg_and_compliance",
+  "heading": "Responsible investment",
+  "text": "Northwind screens every new investment against an exclusion list that covers weapons manufacturing, tobacco and thermal coal. Portfolio companies with more than 50 employees are asked to complete an annual ESG survey."
+ },
+ {
+  "id": "esg_and_compliance#Regulatory status",
+  "doc": "esg_and_compliance",
+  "heading": "Regulatory status",
+  "text": "Northwind is registered with the SEC as an investment adviser. The firm's Form ADV is updated each year and available on request."
+ },
+ {
+  "id": "esg_and_compliance#Compliance",
+  "doc": "esg_and_compliance",
+  "heading": "Compliance",
+  "text": "The chief compliance officer reports directly to the managing partner. All employees complete annual compliance training and certify the code of ethics. Personal trading requires pre-clearance."
+ },
+ {
+  "id": "esg_and_compliance#Cybersecurity",
+  "doc": "esg_and_compliance",
+  "heading": "Cybersecurity",
+  "text": "All employees use multi-factor authentication. The firm runs an external penetration test every year and phishing simulations every quarter. LP data is stored in the fund administrator's system and encrypted at rest."
+ },
+ {
+  "id": "esg_and_compliance#Business continuity",
+  "doc": "esg_and_compliance",
+  "heading": "Business continuity",
+  "text": "The business continuity plan is tested once a year. Critical systems can be restored within 24 hours."
+ },
+ {
+  "id": "fees_and_expenses#Management fee",
+  "doc": "fees_and_expenses",
+  "heading": "Management fee",
+  "text": "The management fee is 2.5% per year on committed capital during the investment period. After the investment period ends, the fee steps down to 1.5% per year on invested capital that has not been realized or written off. Management fees are charged quarterly in advance."
+ },
+ {
+  "id": "fees_and_expenses#Carried interest",
+  "doc": "fees_and_expenses",
+  "heading": "Carried interest",
+  "text": "The general partner receives 20% carried interest on fund profits. Carry rises to 25% once the fund has returned three times paid-in capital to limited partners. Carry is calculated on a whole-fund basis. There is no preferred return hurdle. A full general partner clawback applies at the end of the fund term."
+ },
+ {
+  "id": "fees_and_expenses#Fund expenses",
+  "doc": "fees_and_expenses",
+  "heading": "Fund expenses",
+  "text": "The fund pays legal, audit, fund administration and tax preparation costs. Organizational expenses are capped at $1.5 million. Any amount above the cap reduces the management fee. Transaction fees and board fees received from portfolio companies offset the management fee at 100%."
+ },
+ {
+  "id": "fund_overview#Fund terms",
+  "doc": "fund_overview",
+  "heading": "Fund terms",
+  "text": "Fund III closed in March 2024 with total commitments of $600 million from 41 limited partners. The general partner commitment is 2% of total commitments, or $12 million. The investment period is five years from the final close. The fund term is ten years, with two optional one-year extensions that require approval from the LP Advisory Committee."
+ },
+ {
+  "id": "fund_overview#Strategy",
+  "doc": "fund_overview",
+  "heading": "Strategy",
+  "text": "Fund III invests in seed and Series A companies in enterprise software, fintech and AI infrastructure. The target portfolio is 30 to 35 companies. Initial checks range from $3 million to $15 million. About 50% of the fund is reserved for follow-on investments in existing portfolio companies."
+ },
+ {
+  "id": "fund_overview#Team",
+  "doc": "fund_overview",
+  "heading": "Team",
+  "text": "The investment team has six general partners and eleven investment professionals. The chief financial officer oversees fund accounting, LP reporting and the relationship with the fund administrator."
+ },
+ {
+  "id": "fund_overview#Key person",
+  "doc": "fund_overview",
+  "heading": "Key person",
+  "text": "The key person provision covers the two founding general partners. If either of them stops devoting substantially all of their business time to the fund, the investment period is suspended until the LP Advisory Committee votes on how to proceed."
+ },
+ {
+  "id": "lp_reporting#Quarterly reports",
+  "doc": "lp_reporting",
+  "heading": "Quarterly reports",
+  "text": "Limited partners receive a quarterly report within 60 days after each quarter end. It includes capital account statements, portfolio company updates, fund-level performance (IRR, TVPI and DPI) and a schedule of investments. The fourth-quarter report is delivered with the audited financial statements, within 120 days after year end."
+ },
+ {
+  "id": "lp_reporting#Capital calls and distributions",
+  "doc": "lp_reporting",
+  "heading": "Capital calls and distributions",
+  "text": "Capital call notices are sent at least 10 business days before the funding date. Distribution notices are sent at least 5 business days before payment. All notices are posted to the LP portal and sent by email to each LP's authorized contacts."
+ },
+ {
+  "id": "lp_reporting#Annual meeting",
+  "doc": "lp_reporting",
+  "heading": "Annual meeting",
+  "text": "Northwind holds an annual LP meeting each spring in San Francisco, with a virtual option. The LP Advisory Committee meets twice a year."
+ },
+ {
+  "id": "lp_reporting#Data requests",
+  "doc": "lp_reporting",
+  "heading": "Data requests",
+  "text": "LPs can request additional data through the investor relations team. Standard requests are answered within five business days. Requests for ILPA reporting templates are supported."
+ },
+ {
+  "id": "valuation_policy#Approach",
+  "doc": "valuation_policy",
+  "heading": "Approach",
+  "text": "Portfolio companies are held at fair value under ASC 820. Valuations are prepared every quarter by the finance team and reviewed by the valuation committee before LP reports go out. The primary method is the most recent priced financing round, adjusted for company performance and market conditions since that round. When no recent round exists, the team uses comparable public company multiples."
+ },
+ {
+  "id": "valuation_policy#Valuation committee",
+  "doc": "valuation_policy",
+  "heading": "Valuation committee",
+  "text": "The valuation committee has three members: the chief financial officer, one general partner who does not sit on the company's board, and an independent advisor. The committee meets within 30 days after each quarter end."
+ },
+ {
+  "id": "valuation_policy#Audit",
+  "doc": "valuation_policy",
+  "heading": "Audit",
+  "text": "The annual audit is performed by an independent accounting firm. Audited financial statements are delivered to limited partners within 120 days after year end."
+ },
+ {
+  "id": "valuation_policy#Write-downs",
+  "doc": "valuation_policy",
+  "heading": "Write-downs",
+  "text": "A company is written down when it misses its plan by more than 40% for two straight quarters, or when it raises money at a lower price than its last round."
+ }
+]

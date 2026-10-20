@@ -1,0 +1,141 @@
+{
+ "portfolio_companies": [
+  {
+   "company": "Lumora",
+   "sector": "AI Infrastructure",
+   "stage": "Series A",
+   "lead_partner": "Dana Whitfield",
+   "invested_usd": 12000000.0,
+   "current_value_usd": 31000000.0,
+   "board_seat": "yes",
+   "first_investment": "2024-06-12"
+  },
+  {
+   "company": "Keystride",
+   "sector": "Fintech",
+   "stage": "Seed",
+   "lead_partner": "Marcus Oyelaran",
+   "invested_usd": 4000000.0,
+   "current_value_usd": 6500000.0,
+   "board_seat": "no",
+   "first_investment": "2024-08-02"
+  },
+  {
+   "company": "Orbitra",
+   "sector": "Enterprise Software",
+   "stage": "Series A",
+   "lead_partner": "Priya Raman",
+   "invested_usd": 15000000.0,
+   "current_value_usd": 15000000.0,
+   "board_seat": "yes",
+   "first_investment": "2024-09-20"
+  },
+  {
+   "company": "Veridian",
+   "sector": "AI Infrastructure",
+   "stage": "Seed",
+   "lead_partner": "Dana Whitfield",
+   "invested_usd": 5000000.0,
+   "current_value_usd": 14000000.0,
+   "board_seat": "yes",
+   "first_investment": "2024-11-05"
+  },
+  {
+   "company": "Tesserae",
+   "sector": "Fintech",
+   "stage": "Series A",
+   "lead_partner": "Marcus Oyelaran",
+   "invested_usd": 10000000.0,
+   "current_value_usd": 6000000.0,
+   "board_seat": "yes",
+   "first_investment": "2025-01-15"
+  },
+  {
+   "company": "Halcyra",
+   "sector": "Enterprise Software",
+   "stage": "Seed",
+   "lead_partner": "Priya Raman",
+   "invested_usd": 3000000.0,
+   "current_value_usd": 3000000.0,
+   "board_seat": "no",
+   "first_investment": "2025-03-03"
+  },
+  {
+   "company": "Pylonix",
+   "sector": "AI Infrastructure",
+   "stage": "Series A",
+   "lead_partner": "Elena Brooks",
+   "invested_usd": 14000000.0,
+   "current_value_usd": 22000000.0,
+   "board_seat": "yes",
+   "first_investment": "2025-05-21"
+  },
+  {
+   "company": "Mosaiq",
+   "sector": "Fintech",
+   "stage": "Seed",
+   "lead_partner": null,
+   "invested_usd": 4500000.0,
+   "current_value_usd": 4500000.0,
+   "board_seat": "no",
+   "first_investment": "2025-07-09"
+  },
+  {
+   "company": "Glintra",
+   "sector": "Enterprise Software",
+   "stage": "Series A",
+   "lead_partner": "Elena Brooks",
+   "invested_usd": 11000000.0,
+   "current_value_usd": 9000000.0,
+   "board_seat": "yes",
+   "first_investment": "2025-10-14"
+  },
+  {
+   "company": "Driftwave",
+   "sector": "AI Infrastructure",
+   "stage": "Seed",
+   "lead_partner": "Dana Whitfield",
+   "invested_usd": 6000000.0,
+   "current_value_usd": null,
+   "board_seat": "no",
+   "first_investment": "2026-02-02"
+  }
+ ],
+ "fund_metrics": [
+  {
+   "quarter": "2025-Q3",
+   "net_irr": 0.081,
+   "tvpi": 1.06,
+   "dpi": 0.0,
+   "nav_usd": 98000000.0
+  },
+  {
+   "quarter": "2025-Q4",
+   "net_irr": 0.112,
+   "tvpi": 1.11,
+   "dpi": 0.0,
+   "nav_usd": 121000000.0
+  },
+  {
+   "quarter": "2026-Q1",
+   "net_irr": 0.135,
+   "tvpi": 1.15,
+   "dpi": 0.02,
+   "nav_usd": 138000000.0
+  },
+  {
+   "quarter": "2026-Q2",
+   "net_irr": 0.149,
+   "tvpi": 1.19,
+   "dpi": 0.02,
+   "nav_usd": 149000000.0
+  },
+  {
+   "quarter": "2026-Q3",
+   "net_irr": 0.162,
+   "tvpi": 1.22,
+   "dpi": 0.03,
+   "nav_usd": 157000000.0
+  }
+ ]
+}

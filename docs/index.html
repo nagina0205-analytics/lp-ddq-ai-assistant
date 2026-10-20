@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LP Assistant Agent</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#18212f; --muted:#5f6b7a; --line:#e2e6eb; --accent:#1f4fd1;
+          --ok:#147a3d; --okbg:#e6f6ec; --warn:#9a4a07; --warnbg:#fff2e2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:900px; margin:0 auto; padding:28px 16px 56px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:17px; margin:0 0 12px; }
+  .sub { color:var(--muted); margin:0 0 22px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:18px; }
+  form { display:flex; gap:8px; }
+  input { flex:1; min-width:0; font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; }
+  button { font:inherit; padding:10px 16px; border:0; border-radius:8px; background:var(--accent); color:#fff; cursor:pointer; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .chip { background:#eef2fb; color:#203a7a; border:0; padding:5px 10px; border-radius:99px; font-size:13px; }
+  .badge { display:inline-block; font-size:12px; font-weight:600; padding:2px 9px; border-radius:99px; margin-bottom:8px; }
+  .answered { background:var(--okbg); color:var(--ok); }
+  .needs_human_review { background:var(--warnbg); color:var(--warn); }
+  .answer { font-size:16px; margin:0 0 10px; }
+  .meta { color:var(--muted); font-size:13px; }
+  ol { margin:6px 0 0; padding-left:20px; font-size:13px; color:var(--muted); }
+  code { font-size:12px; background:#f1f3f6; padding:1px 4px; border-radius:4px; word-break:break-word; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { padding:7px 6px; border-bottom:1px solid var(--line); text-align:left; }
+  th:not(:first-child), td:not(:first-child) { text-align:right; }
+  th { color:var(--muted); font-weight:600; }
+  .note { color:var(--muted); font-size:13px; margin:10px 0 0; }
+  #empty { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>LP Assistant Agent</h1>
+  <p class="sub">Ask a due diligence question about a fictional venture fund. The agent picks a tool, answers with a source, and sends anything it can't confirm to a person. Everything runs in your browser.</p>
+
+  <section class="card">
+    <form id="ask">
+      <input id="q" placeholder="e.g. What is the management fee?" aria-label="Your question" autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <section class="card" id="out"><p id="empty">The answer will appear here.</p></section>
+
+  <section class="card">
+    <h2>How well it works</h2>
+    <div style="overflow-x:auto"><table id="metrics"></table></div>
+    <p class="note">The development set was used while building the agent. The held-out set was not, so it is the fairer score. On its first held-out run the agent answered a question about Fund II with Fund III's numbers. A guardrail now routes questions about other funds to a person.</p>
+  </section>
+</main>
+
+<script src="agent.js"></script>
+<script>
+const SAMPLES = ["What is the management fee during the investment period?", "What was the fund's net IRR last quarter?",
+  "Who is the lead partner on Lumora?", "What is our exposure to AI Infrastructure?",
+  "Who is the lead partner on Mosaiq?", "Has any LP signed a side letter?"];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+Promise.all(["knowledge.json", "portfolio.json", "eval_results.json"].map(f => fetch(f).then(r => r.json())))
+  .then(([knowledge, portfolio, evalData]) => {
+    const agent = new LPAgentJS(knowledge, portfolio);
+    const out = document.getElementById("out");
+
+    const show = question => {
+      const r = agent.answer(question);
+      const label = r.status === "answered" ? "Answered with a source" : "Sent to investor relations";
+      out.innerHTML = `
+        <span class="badge ${r.status}">${label}</span>
+        <p class="answer">${esc(r.answer)}</p>
+        <p class="meta">${r.citations.length ? "Source: " + r.citations.map(c => `<code>${esc(c)}</code>`).join(" ") : "Reason: " + esc(r.reason)}</p>
+        <p class="meta" style="margin:10px 0 0">Steps the agent took:</p>
+        <ol>${r.steps.map(s => `<li>${esc(s.tool)} <code>${esc(s.input.sql || s.input.query || s.input.reason || "")}</code></li>`).join("")}</ol>`;
+    };
+
+    document.getElementById("ask").onsubmit = e => {
+      e.preventDefault();
+      const q = document.getElementById("q").value.trim();
+      if (q) show(q);
+    };
+    document.getElementById("chips").innerHTML = SAMPLES.map(s => `<button class="chip" type="button">${esc(s)}</button>`).join("");
+    document.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+      document.getElementById("q").value = b.textContent;
+      show(b.textContent);
+    });
+
+    const m = evalData.metrics, h = evalData.holdout_metrics;
+    const rows = [["Questions", "questions"], ["Answer accuracy", "answer_accuracy"], ["Source accuracy", "source_accuracy"],
+      ["Correct refusals", "correct_refusals"], ["Hallucinations", "hallucinations"], ["Overall correct", "overall_correct"]];
+    document.getElementById("metrics").innerHTML =
+      "<tr><th>Metric</th><th>Development set</th><th>Held-out set</th></tr>" +
+      rows.map(([label, k]) => `<tr><td>${label}</td><td>${m[k]}</td><td>${h[k]}</td></tr>`).join("");
+  })
+  .catch(() => {
+    document.getElementById("out").innerHTML = "<p>Could not load the data files. If you opened this file directly, run <code>python -m http.server</code> inside docs/ instead.</p>";
+  });
+</script>
+</body>
+</html>

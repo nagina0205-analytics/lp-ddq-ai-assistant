@@ -1,0 +1,11 @@
+company,sector,stage,lead_partner,invested_usd,current_value_usd,board_seat,first_investment
+Lumora,AI Infrastructure,Series A,Dana Whitfield,12000000,31000000,yes,2024-06-12
+Keystride,Fintech,Seed,Marcus Oyelaran,4000000,6500000,no,2024-08-02
+Orbitra,Enterprise Software,Series A,Priya Raman,15000000,15000000,yes,2024-09-20
+Veridian,AI Infrastructure,Seed,Dana Whitfield,5000000,14000000,yes,2024-11-05
+Tesserae,Fintech,Series A,Marcus Oyelaran,10000000,6000000,yes,2025-01-15
+Halcyra,Enterprise Software,Seed,Priya Raman,3000000,3000000,no,2025-03-03
+Pylonix,AI Infrastructure,Series A,Elena Brooks,14000000,22000000,yes,2025-05-21
+Mosaiq,Fintech,Seed,,4500000,4500000,no,2025-07-09
+Glintra,Enterprise Software,Series A,Elena Brooks,11000000,9000000,yes,2025-10-14
+Driftwave,AI Infrastructure,Seed,Dana Whitfield,6000000,-1,no,2026-02-02

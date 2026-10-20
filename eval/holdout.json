@@ -1,0 +1,14 @@
+[
+  {"id": "H01", "question": "How many limited partners are in Fund III?", "expected_source": ["fund_overview"], "must_include": ["41"]},
+  {"id": "H02", "question": "Are organizational expenses capped?", "expected_source": ["fees_and_expenses"], "must_include": ["1.5 million"]},
+  {"id": "H03", "question": "When does the valuation committee meet?", "expected_source": ["valuation_policy"], "must_include": ["30 days"]},
+  {"id": "H04", "question": "Where is the annual LP meeting held?", "expected_source": ["lp_reporting"], "must_include": ["San Francisco"]},
+  {"id": "H05", "question": "Who does the chief compliance officer report to?", "expected_source": ["esg_and_compliance"], "must_include": ["managing partner"]},
+  {"id": "H06", "question": "What is the TVPI as of the latest quarter?", "expected_source": ["portfolio_db"], "must_include": ["1.22x"]},
+  {"id": "H07", "question": "What stage is Orbitra?", "expected_source": ["portfolio_db"], "must_include": ["Series A"]},
+  {"id": "H08", "question": "What is the fund's exposure to Fintech?", "expected_source": ["portfolio_db"], "must_include": ["3 companies"]},
+  {"id": "H09", "question": "What is the hurdle rate on carried interest?", "expected_source": ["fees_and_expenses"], "must_include": ["no preferred return"]},
+  {"id": "H10", "question": "What is the fund's ESG rating from MSCI?", "expected_source": null, "must_include": []},
+  {"id": "H11", "question": "How many employees does Lumora have?", "expected_source": null, "must_include": []},
+  {"id": "H12", "question": "What was the net IRR of Fund II?", "expected_source": null, "must_include": []}
+]
